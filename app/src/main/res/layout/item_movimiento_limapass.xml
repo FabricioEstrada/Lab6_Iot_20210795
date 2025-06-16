@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Primera fila: ID + botones editar/eliminar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvIdMovimiento"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="ID: "
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnEditar"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Editar"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_edit"
+                android:tint="@color/black" />
+
+            <ImageButton
+                android:id="@+id/btnEliminar"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Eliminar"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_delete"
+                android:tint="@color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvParaderos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrada - Salida"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tvTiempo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiempo de viaje"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

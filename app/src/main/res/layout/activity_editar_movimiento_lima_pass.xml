@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar sin padding -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/blue_700"
+        android:elevation="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:title="Editar Movimiento LimaPass"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenedor con padding SOLO para el formulario -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/formContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/etIdMovimiento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="ID del Movimiento"
+            android:inputType="text"
+            android:enabled="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Fecha (yyyy-MM-dd)"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@id/etIdMovimiento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etParaderoEntrada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Paradero de Entrada"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/etFecha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etParaderoSalida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Paradero de Salida"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/etParaderoEntrada"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etTiempoViaje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Tiempo de viaje (minutos)"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@id/etParaderoSalida"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:backgroundTint="@color/azul_button"
+            app:layout_constraintTop_toBottomOf="@id/etTiempoViaje"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
