@@ -1,0 +1,3 @@
+Fabricio Andre Estrada Castillo - 20210795
+* Todo el proyecto fue pusheado en master, NO en main
+* Este proyecto fue realizado usando el LLM ChatGPT
